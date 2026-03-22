@@ -3,151 +3,206 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Abdiel Portfolio</title>
+<title>Arctic Portfolio</title>
 
 <style>
-body {
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     font-family: Arial, sans-serif;
-    background: #0d1117;
+    scroll-behavior: smooth;
+}
+
+/* NAVBAR */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(0,0,0,0.7);
+    backdrop-filter: blur(8px);
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+    z-index: 1000;
+}
+
+nav a {
     color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
 }
 
-.container {
-    max-width: 1000px;
-    margin: auto;
+nav a:hover {
+    color: #1f6feb;
+}
+
+/* SECTIONS */
+section {
+    min-height: 100vh;
+    padding: 100px 20px 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+/* THEMES */
+.navy { background: #0a192f; color: white; }
+.white { background: #ffffff; color: black; }
+.blue { background: #1f6feb; color: white; }
+.black { background: #0d1117; color: white; }
+
+/* TEXT */
+h1 { font-size: 3rem; }
+h2 { font-size: 2rem; margin-bottom: 20px; }
+p { max-width: 600px; margin: 10px auto; }
+
+/* BOXES */
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.box {
+    margin: 15px;
     padding: 20px;
+    border-radius: 12px;
+    background: rgba(255,255,255,0.1);
+    transition: 0.3s;
 }
 
-h1, h2 {
-    color: #58a6ff;
+.white .box {
+    background: #f0f0f0;
 }
 
-.card {
-    background: #161b22;
-    padding: 20px;
-    margin: 15px 0;
-    border-radius: 10px;
+.box:hover {
+    transform: translateY(-8px);
 }
 
+/* BUTTON */
 .button {
-    display: inline-block;
-    padding: 10px 15px;
-    margin: 5px;
-    background: #238636;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: #1f6feb;
     color: white;
     text-decoration: none;
     border-radius: 5px;
 }
 
-.highlight {
-    background: #1f6feb;
-    padding: 10px;
-    border-radius: 8px;
+/* ANIMATIONS */
+.hidden {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.6s ease;
+}
+
+.show {
+    opacity: 1;
+    transform: translateY(0);
 }
 </style>
 </head>
 
 <body>
-<div class="container">
 
-    <!-- HEADER -->
-    <h1>Abdiel</h1>
-    <p>Status: <strong>Available</strong></p>
-    <p>Primary: <strong>Lua</strong></p>
-    <p>Other: Animation, UI Designing</p>
-    <p>Timezone: AST (Puerto Rico)</p>
+<!-- NAVBAR -->
+<nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#work">Work</a>
+    <a href="#payment">Payment</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<!-- HOME -->
+<section id="home" class="navy hidden">
+    <h1>Arctic</h1>
+    <p>Status: Available</p>
+    <p>Primary: Lua | Animation | UI Designing</p>
+    <p>Timezone: AST</p>
     <p>Age: 16</p>
+</section>
 
-    <!-- DESCRIPTION -->
-    <div class="card">
-        <h2>About My Work</h2>
-        <p>I build systems, animations, & art for Roblox from scratch.</p>
-    </div>
+<!-- ABOUT -->
+<section id="about" class="white hidden">
+    <h2>About Me</h2>
+    <p>
+        I build systems, animations, & art for Roblox from scratch.
+        I focus on clean, polished, and fully functional work.
+    </p>
+</section>
 
-    <!-- ABOUT ME -->
-    <div class="card">
-        <h2>About Me</h2>
-        <p>
-            I am a Roblox developer focused on scripting systems, creating animations,
-            and designing UI. I enjoy building clean, functional, and polished work
-            from scratch.
-        </p>
-    </div>
-
-    <!-- SKILLS -->
-    <div class="card">
-        <h2>Skills</h2>
-
-        <p>Luau — 1 year</p>
-        <p>Animating — 3 years</p>
-        <p>UI Designing — 2 years</p>
-    </div>
-
-    <!-- GAME SYSTEMS -->
-    <div class="card">
-        <h2>Game Systems / Mechanics</h2>
-
-        <p>• Custom gameplay systems</p>
-        <p>• Clean and optimized scripting</p>
-        <p>• Player mechanics and interactions</p>
-        <p>• Fully functional Roblox systems built from scratch</p>
-    </div>
-
-    <!-- LUA -->
-    <div class="card">
-        <h2>Luau</h2>
-
-        <p>• Advanced scripting systems</p>
-        <p>• Clean code structure</p>
-        <p>• Debugging & optimization</p>
-    </div>
-
-    <!-- ANIMATION -->
-    <div class="card">
-        <h2>Animating</h2>
-
-        <p>• Character animations</p>
-        <p>• Smooth movement systems</p>
-        <p>• Game-ready animation work</p>
-    </div>
-
-    <!-- UI DESIGN -->
-    <div class="card">
-        <h2>UI Designing</h2>
-
-        <p>• Clean and modern UI</p>
-        <p>• User-friendly layouts</p>
-        <p>• Roblox UI systems</p>
-    </div>
-
-    <!-- PAYMENT -->
-    <div class="card">
-        <h2>Payment & Terms</h2>
-
-        <p>Robux: Accepted</p>
-        <p>Structure: Percentage, Robux</p>
-        <p>Upfront: Required for all jobs</p>
-        <p>Commission: Open</p>
-
-        <div class="highlight">
-            I only take percentage - robux based projects & Upfront fee is required
+<!-- SKILLS -->
+<section id="skills" class="blue hidden">
+    <h2>Skills</h2>
+    <div class="grid">
+        <div class="box">
+            <h3>Luau</h3>
+            <p>1 Year</p>
+        </div>
+        <div class="box">
+            <h3>Animating</h3>
+            <p>3 Years</p>
+        </div>
+        <div class="box">
+            <h3>UI Designing</h3>
+            <p>2 Years</p>
         </div>
     </div>
+</section>
 
-    <!-- CONTACT -->
-    <div class="card">
-        <h2>Contact</h2>
+<!-- WORK -->
+<section id="work" class="white hidden">
+    <h2>What I Do</h2>
+    <p>• Roblox systems & mechanics</p>
+    <p>• Gameplay scripting</p>
+    <p>• Animation systems</p>
+    <p>• UI design & interfaces</p>
+</section>
 
-        <a class="button" href="https://www.roblox.com/users/1705281344/profile" target="_blank">
-            Roblox Profile
-        </a>
+<!-- PAYMENT -->
+<section id="payment" class="black hidden">
+    <h2>Payment & Terms</h2>
+    <p>Robux: Accepted</p>
+    <p>Structure: Percentage, Robux</p>
+    <p>Upfront: Required for all jobs</p>
+    <p>Commission: Open</p>
 
-        <a class="button" href="https://discord.com/channels/@me/1463704361606713597" target="_blank">
-            Discord
-        </a>
+    <div class="box">
+        I only take percentage - robux based projects & upfront fee is required
     </div>
+</section>
 
-</div>
+<!-- CONTACT -->
+<section id="contact" class="blue hidden">
+    <h2>Contact</h2>
+
+    <a class="button" href="https://www.roblox.com/users/1705281344/profile" target="_blank">
+        Roblox Profile
+    </a>
+
+    <a class="button" href="https://discord.com/channels/@me/1463704361606713597" target="_blank">
+        Discord
+    </a>
+</section>
+
+<script>
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if(entry.isIntersecting){
+            entry.target.classList.add('show');
+        }
+    });
+});
+
+document.querySelectorAll('.hidden').forEach(el => observer.observe(el));
+</script>
+
 </body>
 </html>
